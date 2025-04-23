@@ -19,7 +19,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%; /* Full width */
-    height: 80px; /* Keep the height */
+    height: 100px; 
     background-color: rgb(255, 255, 255); /* Dark background for visibility */
     color: #dbd5d5;
     display: flex;
@@ -45,36 +45,54 @@ nav {
     border-radius: 10px;
   }
   .menu {
-    margin-right: 20px; /* Augmente l'espace entre le menu et le bouton */
     display: flex;
-    gap: 20px; /* Ajoute de l’espace entre les liens du menu */
+    gap: 2rem;
+    justify-content: flex-end;
+    width: 100%;
   }
   
   .menu a {
     text-decoration: none;
-    color: #024ee2;
-    padding: 10px 20px;
-    font-size: 20px;
+    color:rgba(27, 119, 188, 1);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+  .menu a:hover {
+    color: #ff6600;
+  }
+  .menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color:  #ff6600;
+    transition:all 0.3s ease-in-out;
   }
   
-  .menu a:hover {
-    border: 1px solid #005bac; /* Bleu */
-    background: transparent;
+  .menu a:hover::after {
+    width: 100%;
   }
   .register {
-    margin-left: 30px; /* Espace entre le menu et le bouton */
+    margin-left: 25px; /* Espace entre le menu et le bouton */
     display: flex;
-    gap: 23px;
-    
+    gap: 20px;
+    height:45px;
   }
   .register a {
     text-decoration: none;
     color: blanchedalmond;
     padding: 10px 20px;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 8px;
     background: #024ee2;
+    width: 85px;
+    height: 40px;
   }
+   
   
   .register a:hover {
     border: 1px solid #005bac;
