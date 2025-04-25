@@ -49,6 +49,7 @@ nav {
     gap: 2rem;
     justify-content: flex-end;
     width: 100%;
+    
   }
   
   .menu a {
@@ -58,6 +59,7 @@ nav {
     font-size: 1.1rem;
     transition: all 0.3s ease-in-out;
     position: relative;
+    margin-bottom: 100px;
   }
   .menu a:hover {
     color: #ff6600;

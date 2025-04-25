@@ -32,11 +32,13 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   padding-top: 140px; /* Ajusté pour éviter le chevauchement avec la navbar */
+  
 }
 
 header {
   width: 100%;
   position: fixed;
+  display: flex;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -44,8 +46,8 @@ header {
   box-shadow: var(--shadow);
 }
 
-nav {
-  display: flex;
+nav{
+  display: flex !important;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -59,11 +61,9 @@ nav {
   flex-grow: 1; /* Permet d'occuper l'espace à gauche */
 }
 .logo img {
-  height: 80px; /* Ajuste selon la taille désirée */
-  width: 100px;
-  padding-top: 5px;
-  padding-left: 5x; /* Ajoute un peu d'espace depuis le bord */
-  border-radius: 10px;
+  height: 70px;
+  width: auto;
+  transition: var(--transition);
 }
 
 .menu {
