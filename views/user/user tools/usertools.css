@@ -1,0 +1,380 @@
+:root {
+  --primary-color: #043ba9;
+  --secondary-color: rgba(27,119,188,255);
+  --accent-color: #ff6600;
+  --dark-color: #121212;
+  --light-color: #f8f9fa;
+  --white: #ffffff;
+  --text-color: #333333;
+  --gray: #555555;
+  --light-gray: #e0e0e0;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease-in-out;
+  --third-color: rgba(243,108,36,255);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-top: 140px; /* Ajusté pour éviter le chevauchement avec la navbar */
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+  transition: var(--transition);
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.menu a.active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: var(--accent-color);
+}
+
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: var(--transition);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+  /*MAIN*/
+  main {
+    padding: 2rem;
+    margin-top: 80px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding-top: 10px;
+  }
+  
+  .users-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    gap: 15px; /* Ajoute un espacement égal entre les éléments */
+  }
+  
+  .content {
+    flex: 1 1 20%; /* Cela assure que tous les éléments ont une largeur égale en utilisant flex */
+    margin: 15px;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 10px;
+    transition: 0.4s;
+    background: #ffffffc9;
+    min-width: 200px; /* Pour que les éléments ne deviennent pas trop petits sur des écrans réduits */
+  }
+  
+  .content:hover {
+     transform: translate(0px, -8px);
+  }
+  
+  main img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  p {
+    text-align: center;
+    color: #b2bec3;
+    margin: 0;
+  }
+  
+  button {
+    font-size: 15px;
+    color: #fff;
+    width: 80%;
+    height: 50%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .Command-1,.Command-2,.Command-3,.Command-4,.Command-5,.Command-6,.Command-7,.Command-8{
+    background: rgb(50, 122, 194);
+  }
+  
+  button:hover {
+    background-color: rgba(50, 122, 194, 0.623);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .content {
+      flex: 1 1 45%; /* Augmente la largeur des éléments pour les écrans plus petits */
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .content {
+      flex: 1 1 100%; /* Assure que les éléments prennent 100% de la largeur sur les très petits écrans */
+    }
+  }
+  
+  .menu-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 160px;
+    display: none;
+    z-index: 1000;
+  }
+  
+  .dropdown a {
+    display: block;
+    padding: 12px;
+    color: rgb(50, 122, 194);
+    text-decoration: none;
+  }
+  
+  .dropdown a:hover {
+    background-color: #cfd1d3;
+    color: rgb(50, 122, 194);
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  
+  /*ici on a commencé sur les details*/
+  
+  /* Modal Styles */
+  .modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    visibility: hidden; /* Masquer le modal par défaut */
+    opacity: 0;
+    align-items: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  /* Affichage du modal */
+  .modal.open {
+    display: flex;
+    visibility: visible; /* Rendre visible quand il est ouvert */
+    opacity: 1; /* Rendre totalement opaque */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%; /* Taille flexible */
+    max-width: 500px; /* Limite de largeur */
+    height: auto; /* Hauteur flexible */
+    box-shadow: 0 0 5px rgba(244, 95, 3, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Bouton de fermeture */
+  .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+    background: none;
+    border: none;
+  }
+  
+  .close-btn:hover {
+    background-color: red;
+  }
+  .modal-content p {
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: justify;
+    position: center;
+    justify-content: center;
+  
+    align-items: center;
+  }
+  /* Animation de fermeture */
+  .close-btn:hover {
+    color: var(--accent-color);
+    transform: rotate(90deg);
+  }
+  
+  /* Style du modal */
+  .modal-container {
+    display: flow-root;
+    gap: 2rem;
+  }
+  
+  .modal-image-container {
+    flex: 1;
+  }
+  
+  .modal-image-container img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex: 0 0 auto; /* L'image ne change pas de taille */
+    max-width: 100%; /* Limite la taille de l'image */
+    position: center;
+  }
+  
+  .modal-details {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .modal-details h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .specs {
+    margin: 1.5rem 0;
+  }
+  
+  .specs h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .specs ul {
+    list-style: none;
+  }
+  
+  .specs li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .specs li::before {
+    content: '•';
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+  }
+
+.description{
+  color: rgba(0, 0, 0, 0.589);
+}

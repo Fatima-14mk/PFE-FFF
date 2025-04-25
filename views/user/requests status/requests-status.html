@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="requests-status.css">
+  <title>ONAAPH</title>
+</head>
+<body>
+   <!-- HEADER NAVBAR -->
+   <header id="home"> 
+    <nav class="fade-in">
+        <div class="logo fade-in">
+            <img src="../../../public/images/shared/logo.png" alt="Logo" loading="lazy">
+        </div>
+
+        <div class="menu fade-in">
+            <a href="../user tools/usertools.html">Tools</a>
+            <a href="./requests-status.html" class="active" >Requests status</a>
+
+            <div class="menu-container">  
+              <a href="#" id="settings-btn">Settings</a>
+              <div id="dropdown-menu" class="dropdown">
+                  <a href="../myprofile/myprofile.html">👤My profile</a>
+                  <a href="#">⬅ Log out</a>
+               </div> 
+            </div> 
+    
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+</header>
+  <main class="container">
+    <h1>My Requests</h1>
+
+    <section class="cards-container">
+      <!-- Card 1: Pending -->
+      <div class="card">
+        <img src="../../../public/images/shared/manual-wheelchair.jpg" alt="Manual Wheelchair" />
+        <div class="info">
+          <strong>Manual Wheelchair</strong>
+          <div class="date">Requested on April 20, 2025</div>
+        </div>
+        <div class="status pending">
+          <div class="status-content">
+            <div class="status-badge"><div class="icon">⏳</div> Under Review</div>
+            <div class="date-info">Estimated review: 2-3 days</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Refused -->
+      <div class="card">
+        <img src="../../../public/images/shared/crutches.jpg" alt="Crutches" />
+        <div class="info">
+          <strong>Crutches</strong>
+          <div class="date">Requested on April 15, 2025</div>
+        </div>
+        <div class="status refused">
+          <div class="status-content">
+            <div class="status-badge"><div class="icon">❌</div> Not Eligible</div>
+            <div class="date-info">Review completed April 18, 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Accepted -->
+      <div class="card">
+        <img src="../../../public/images/shared/bath-seat.jpg" alt=" Bath seat " />
+        <div class="info">
+          <strong> Bath seat </strong>
+          <div class="date">Requested on April 10, 2025</div>
+        </div>
+        <div class="status accepted">
+          <div class="status-content">
+            <div class="status-badge"><div class="icon">✅</div> Approved</div>
+            <div class="date-info">Pick-up: April 25, 2025</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../../../public/js/user/requests-status.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+  /*MAIN*/
+  .btn-enter{
+    background-color: rgb(50, 122, 194); /* Couleur de fond verte */ 
+    color: white; /* Texte blanc */ 
+    border: none; /* Pas de bordure */ 
+    padding: 15px 32px; /* Espacement interne */ 
+    text-align: center; /* Centrer le texte */ 
+    text-decoration: none; /* Retirer la décoration de texte */ 
+    display: inline-block; /* Le rendre en ligne avec d'autres éléments */ 
+    font-size: 16px; /* Taille du texte */ 
+    border-radius: 50px; /* Coins arrondis */ 
+    cursor: pointer; /* Curseur en forme de main */ 
+    transition: background-color 0.3s, transform 0.3s; /* Effet de transition */ 
+    margin-top: 300px;
+    transform: scale(1.1); /* Agrandir légèrement le bouton */   
+} 
+
+.btn-enter:hover{
+    background-color: rgba(50, 122, 194, 0.623);
+}
+
+
+
+.btn-enter:active { 
+    background-color: rgb(204, 235, 253);/* Changer la couleur de fond lors du clic */
+    transform: scale(1); /* Retourner à la taille normale au clic */ 
+} 
+
+.menu-container { 
+    position: relative; 
+    display: inline-block; 
+} 
+
+.dropdown { 
+    position: absolute; 
+    top: 100%; 
+    right: 0; 
+    background: white; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
+    min-width: 160px; 
+    display: none; 
+    z-index: 1000; 
+} 
+
+.dropdown a { 
+    display: block; 
+    padding: 12px; 
+    color: rgb(50, 122, 194); 
+    text-decoration: none; 
+} 
+
+
+.dropdown a:hover {
+    background-color: #cfd1d3;
+    color: rgb(50, 122, 194);
+}
+
+.show { 
+    display: block; 
+}
+
+  .ui-w-80 {
+    width: 80px !important;
+    height: auto;
+  }
+  
+  .btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    background: rgba(0, 0, 0, 0);
+    color: #4e5155;
+  }
+  
+  
+  label.btn {
+    margin-bottom: 0;
+  }
+  
+  .btn-outline-primary {
+    border-color: #26b4ff;
+    background: transparent;
+    color: #26b4ff;
+  }
+  
+  .btn {
+    cursor: pointer;
+  }
+  
+  .text-light {
+    color: #babbbc !important;
+  }
+  
+  .card {
+    background-clip: padding-box;
+    box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+  }
+  
+  .row-bordered {
+    overflow: hidden;
+  }
+  
+  .account-settings-fileinput {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  
+  .account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+  }
+  
+  html:not(.dark-style) .account-settings-links .list-group-item.active {
+    background: transparent !important;
+  }
+  
+  .light-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+  }
+  
+  .light-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+  }
+  
+  /* Custom Styles */
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #4e5155;
+  }
+  
+  .form-control {
+    height: calc(2.25rem + 2px);
+    padding: 0.625rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.375rem;
+  }
+  
+  .alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+  }
+  
+  .text-right .btn {
+    margin-left: 10px;
+  }
+  
+  .text-light small {
+    font-size: 0.875rem;
+  }
+  
+  .card-body .form-group select {
+    font-size: 1rem;
+    height: calc(2.25rem + 2px);
+    padding: 0.625rem 1rem;
+  }
+  
+  .text-right {
+    margin-top: 20px;
+  }
+  
+  .nav-links .menu-container {
+    position: relative;
+  }
+  
+  .dropdown {
+    position: absolute !important;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 160px;
+    display: none;
+    z-index: 1000;
+  }
+  
+  .dropdown a {
+    display: block;
+    padding: 12px;
+    color: rgb(50, 122, 194);
+    text-decoration: none;
+  }
+  
+  .dropdown a:hover {
+    background-color: #cfd1d3;
+    color: rgb(50, 122, 194);
+  }
+  
+  .show {
+    display: block;
+  }

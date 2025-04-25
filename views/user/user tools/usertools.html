@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="usertools.css" />
+    <title>ONAAPH</title>
+  </head>
+
+  <body>
+     <!-- HEADER NAVBAR -->
+     <header id="home"> 
+      <nav class="fade-in">
+          <div class="logo fade-in">
+              <img src="../../../public/images/shared/logo.png" alt="Logo" loading="lazy">
+          </div>
+          <div class="menu fade-in">
+              <a href="usertools.html" class="active">Tools</a>
+              <a href="../requests status/requests-status.html">Requests status</a>
+              <div class="menu-container">  
+                <a href="#" id="settings-btn">Settings</a>
+                <div id="dropdown-menu" class="dropdown">
+                    <a href="../myprofile/myprofile.html">👤My profile</a>
+                    <a href="#">⬅ Log out</a>
+                </div>
+              </div>    
+          </div>
+      
+          <div class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+          </div>
+      </nav>
+  </header>
+
+  <main class="container">
+      <h1>My Requests</h1>
+      
+
+      <section class="users-tools">
+        <div class="content">
+          <figure>
+            <img
+              src="../../../public/images/shared/manual-wheelchair.jpg"
+              alt="img"
+            />
+            <figcaption>
+              <h3>Manual wheelchair</h3>
+              <p class="characteristics-1">characteristics</p>
+            </figcaption>
+            <button class="Command-1">Add to wishList</button>
+          </figure>
+        </div>
+
+        <div class="content">
+          <figure>
+            <img
+              src="../../../public/images/shared/electric-wheelchair.jpg"
+              alt="img"
+              />
+            <figcaption>
+              <h3>Electric wheelchair</h3>
+              <p class="characteristics-2">characteristics</p>
+            </figcaption>
+            <button class="Command-2">Add to wishList</button>
+          </figure>
+        </div>
+
+        <div class="content">
+          <figure>
+            <img src="../../../public/images/shared/electric-assist-wheelchair.jpg" alt="img" />
+            <figcaption>
+              <h3>Electric assist wheelchair</h3>
+              <p class="characteristics-3">characteristics</p>
+            </figcaption>
+            <button class="Command-3">Add to wishList</button>
+          </figure>
+        </div>
+
+        
+        <div class="content">
+          <figure>
+            <img src="../../../public/images/shared/crutches.jpg" alt="img" />
+            <figcaption>
+              <h3>Crutches</h3>
+              <p class="characteristics-4">characteristics</p>
+            </figcaption>
+            <button class="Command-4">Add to wishList</button>
+          </figure>
+        </div>
+
+        
+        <div class="content">
+          <figure>
+            <img src="../../../public/images/shared/rollator.jpg" alt="img" />
+            <figcaption>
+              <h3>rollator</h3>
+              <p class="characteristics-5">characteristics</p>
+            </figcaption>
+            <button class="Command-5">Add to wishList</button>
+          </figure>
+        </div>
+
+        
+        <div class="content">
+          <figure>
+            <img src="../../../public/images/shared/toilet-reducer.jpg" alt="img" />
+            <figcaption>
+              <h3>Toilet reducer</h3>
+              <p class="characteristics-6">characteristics</p>
+            </figcaption>
+            <button class="Command-6">Add to wishList</button>
+          </figure>
+        </div>
+
+        
+        <div class="content">
+          <figure>
+            <img src="../../../public/images/shared/bath-seat.jpg" alt="img" />
+            <figcaption>
+              <h3>Bath seat</h3>
+              <p class="characteristics-7">characteristics</p>
+            </figcaption>
+            <button class="Command-7">Add to wishList</button>
+          </figure>
+        </div>
+
+        
+        <div class="content">
+          <figure>
+            <img src="../../../public/images/shared/handrail.jpg" alt="img" />
+            <figcaption>
+              <h3>Handrail</h3>
+              <p class="characteristics-8">characteristics</p>
+            </figcaption>
+            <button class="Command-8">Add to wishList</button>
+          </figure>
+        </div>
+
+      
+
+      </section>
+
+      <!-- Modal pour les détails -->
+      <div id="detail-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" aria-label="Fermer">&times;</span>
+          <div class="modal-container">
+            <div class="modal-image-container">
+              <img id="modal-image" src="" alt="" />
+            </div>
+            <div class="modal-details">
+              <h3 id="modal-title"></h3>
+
+              <p class="description" id="modal-description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../../../public/js/user/usertools.js"></script>
+  </body>
+</html>
