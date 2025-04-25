@@ -71,43 +71,43 @@ desc: 'Lightweight steel or aluminum frame. Foldable for easy storage and transp
 },
 {
 selector: '.characteristics-2',
-img: '../../images/shared/electric-wheelchair.jpg',
+img: '../../../public/images/shared/electric-wheelchair.jpg',
 title: 'Electric wheelchair',
 desc: 'Powered by rechargeable battery. Joystick control for easy navigation. Padded seat and backrest for comfort. Anti-tip wheels for extra safety. Ideal for users with limited upper body strength.'
 },
 {
 selector: '.characteristics-3',
-img: '../../images/shared/electric-assist-wheelchair.jpg',
+img: '../../../public/images/shared/electric-assist-wheelchair.jpg',
 title: 'Electric assist wheelchair',
 desc: 'Manual wheelchair with electric assist motor. Motorized support for slopes and long distances. Removable battery for convenient charging. Switch between manual and powered mode. Compact and foldable design.'
 },
 {
 selector: '.characteristics-4',
-img: '../../images/shared/crutches.jpg',
+img: '../../../public/images/shared/crutches.jpg',
 title: 'Crutches',
 desc: 'Lightweight aluminum construction. Ergonomic handles and arm cuffs for comfort. Adjustable height for user customization. Non-slip rubber tips for safety. Ideal for short- or long-term mobility support.'
 },
 {
 selector: '.characteristics-5',
-img: '../../images/shared/rollator.jpg',
+img: '../../../public/images/shared/rollator.jpg',
 title: 'Rollator',
 desc: 'Four-wheel design for stability and maneuverability. Built-in seat and backrest for resting. Height-adjustable handles. Hand brakes for safety. Storage basket for personal items.'
 },
 {
 selector: '.characteristics-6',
-img: '../../images/shared/toilet-reducer.jpg',
+img: '../../../public/images/shared/toilet-reducer.jpg',
 title: 'Toilet reducer',
 desc: 'Fits securely on standard toilet seats. Raised seat height for easier sitting and standing. Side handles for added support and balance. Easy to clean, durable plastic material. Ideal for elderly or mobility-impaired users.'
 },
 {
 selector: '.characteristics-7',
-img: '../../images/shared/bath-seat.jpg',
+img: '../../../public/images/shared/bath-seat.jpg',
 title: 'Bath seat',
 desc: 'Non-slip rubber feet for extra stability. Corrosion-resistant aluminum legs. Height-adjustable legs for user comfort. Water-drainage holes to prevent slipping. Lightweight and easy to clean.'
 },
 {
 selector: '.characteristics-8',
-img: '../../images/shared/handrail.jpg',
+img: '../../../public/images/shared/handrail.jpg',
 title: 'Handrail',
 desc: 'Heavy-duty steel or aluminum construction. Wall or floor mounted for added support. Ergonomic design for secure grip. Ideal for bathrooms, hallways, and near stairs. Foldable models available for space-saving.'
 }
