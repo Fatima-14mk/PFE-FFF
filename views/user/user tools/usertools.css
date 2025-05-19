@@ -99,14 +99,14 @@ nav {
   width: 100%;
 }
 
-.mobile-menu-btn {
+.menu-toggle {
   display: none;
-  font-size: 1.5rem;
-  color: var(--secondary-color);
-  cursor: pointer;
   background: none;
   border: none;
-}
+  font-size: 24px;
+  color: var(--primary-blue);
+  cursor: pointer;
+  padding: 5px;}
 
   /*MAIN*/
   main {
@@ -194,7 +194,7 @@ nav {
   button:hover {
     background-color: rgba(50, 122, 194, 0.623);
   }
-  
+
   /* Responsive */
   @media (max-width: 1000px) {
     .content {
@@ -298,9 +298,6 @@ nav {
     border: none;
   }
   
-  .close-btn:hover {
-    background-color: red;
-  }
   .modal-content p {
     max-height: 200px;
     overflow-y: auto;
@@ -377,4 +374,190 @@ nav {
 
 .description{
   color: rgba(0, 0, 0, 0.589);
+}
+/* Footer */
+footer {
+  background: var(--dark-color);
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  width: 250px;
+  margin-bottom: 30px;
+}
+
+.footer-section .logo img {
+  height: 120px;
+  width: 160px;
+  border-radius: 18px;
+  object-fit: contain;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+
+
+
+/* =============== MOBILE RESPONSIVE STYLES ONLY =============== */
+@media (max-width: 991px) {
+  /* Navbar Mobile */
+  nav {
+      flex-wrap: wrap;
+      padding: 10px 15px;
+      height: auto;
+  }
+
+  .logo {
+      order: 0;
+      flex: 1;
+  }
+
+  .logo img {
+      height: 60px;
+  }
+
+  .menu-toggle {
+      display: block;
+      order: 1;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--primary-color);
+      margin-left: auto;
+      z-index: 1001;
+  }
+
+  .menu {
+      display: none;
+      order: 3;
+      width: 100%;
+      flex-direction: column;
+      background: var(--white);
+      margin-top: 15px;
+      padding: 0;
+  }
+
+  .menu.active {
+      display: flex;
+  }
+
+  .menu a {
+      padding: 12px 15px;
+      border-bottom: 1px solid var(--light-gray);
+  }
+
+  .dropdown {
+      position: static;
+      box-shadow: none;
+      display: none;
+  }
+
+  .dropdown.show {
+      display: block;
+  }
+
+
+  /* Main Content Mobile */
+  body {
+      padding-top: 80px;
+  }
+
+  .container {
+      padding: 15px;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+  }
+
+  .users-tools {
+      margin: 20px 0;
+      gap: 10px;
+  }
+
+  .content {
+      flex: 1 1 100%;
+      margin: 5px 0;
+      min-width: 0;
+  }
+
+  main img {
+      width: 150px;
+      height: 150px;
+  }
+
+  button {
+      width: 90%;
+      padding: 12px;
+      margin: 8px auto;
+  }
+
+  /* Modal Mobile */
+  .modal-content {
+      width: 95%;
+      padding: 15px;
+  }
+
+  .modal-container {
+      flex-direction: column;
+  }
+
+  .modal-image-container img {
+      max-height: 200px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+  .content {
+      flex: 1 1 45%;
+  }
 }

@@ -18,16 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname.includes('detail_msg.html')) {
         loadMessageDetails();
     }
-
-    // Gestion responsive du menu
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const menu = document.querySelector('.menu');
-    
-    if (mobileMenuBtn && menu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        });
-    }
 });
 
 function loadMessageDetails() {

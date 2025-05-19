@@ -1,3 +1,14 @@
+:root {
+  --primary-blue: #024ee2;
+  --dark-blue: #005bac;
+  --orange: #ff6600;
+  --light-blue: rgba(27, 119, 188, 1);
+  --white: #fff;
+  --off-white: #fcfefffa;
+  --dark-bg: #121212;
+  --text-color: #333;
+  --nav-height: 109.59px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +22,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f4f4f4;
+     background-color: var(--off-white);
 }
 
 nav {
@@ -173,3 +184,89 @@ button:hover {
 .signup-text a:hover {
     text-decoration: underline;
 }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--primary-blue);
+  cursor: pointer;
+  padding: 5px;
+}
+@media (max-width: 767px) {
+  nav {
+    /* Activer l'emballage flex et l'espacement */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Clé pour séparer logo et toggle */
+    padding: 10px 15px;
+}
+
+.logo {
+  order: 0;  /* Logo en premier dans l'ordre visuel */
+  
+  
+}
+.logo img {
+  height: 60px;
+  width: 80px;
+}
+
+.menu-toggle {
+  display: block;
+  order: 1;
+  margin-left: auto;
+}
+
+  .menu {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    background: var(--off-white);
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .menu.active {
+    display: flex;        /* affiche le menu quand actif */
+  }
+
+  .menu a {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  .register {
+    display: none;
+    order: 4;
+    width: 100%;
+    margin: 0;
+    padding: 15px 20px;
+    background: var(--off-white);
+    border-radius: 0 0 8px 8px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    height: auto;
+  }
+
+  .register.active {
+    display: flex;
+  }
+
+  .register a {
+    width: 48%;
+    height: auto;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  
+  .form-container {
+    width: 90%;
+    margin-top: 20px;
+  }}
+  
+  

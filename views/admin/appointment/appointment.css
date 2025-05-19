@@ -99,14 +99,7 @@ nav {
   width: 100%;
 }
 
-.mobile-menu-btn {
-  display: none;
-  font-size: 1.5rem;
-  color: var(--secondary-color);
-  cursor: pointer;
-  background: none;
-  border: none;
-}
+
 
 .logOut {
   margin-left: 60px;
@@ -236,39 +229,3 @@ h1 {
   background-color: #c02323;
 }
 
-/* Responsive design */
-@media (max-width: 1200px) {
-  .container {
-    max-width: 990px;
-  }
-}
-
-@media (max-width: 992px) {
-  .card {
-    width: 30%; /* 3 par ligne sur les écrans moyens */
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    width: 45%; /* 2 par ligne sur les petits écrans */
-  }
-  
-  .mobile-menu-btn {
-    display: block;
-  }
-  
-  .menu {
-    display: none; /* Masquer le menu sur mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    width: 100%;
-  }
-  
-  .logOut {
-    margin-left: 0;
-  }
-}

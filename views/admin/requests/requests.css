@@ -1,40 +1,41 @@
 :root {
-    --primary-color: #043ba9;
-    --secondary-color: rgba(27,119,188,255);
-    --accent-color: #ff6600;
-    --dark-color: #121212;
-    --light-color: #f8f9fa;
-    --white: #ffffff;
-    --text-color: #333333;
-    --gray: #555555;
-    --light-gray: #e0e0e0;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease-in-out;
-    --third-color: rgba(243,108,36,255);
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: var(--text-color);
-    line-height: 1.6;
-    padding-top: 80px; /* Ajusté pour éviter le chevauchement avec la navbar */
-  }
-  
-  header {
+  --primary-color: #043ba9;
+  --secondary-color: rgba(27,119,188,255);
+  --accent-color: #ff6600;
+  --dark-color: #121212;
+  --light-color: #f8f9fa;
+  --white: #ffffff;
+  --text-color: #333333;
+  --gray: #555555;
+  --light-gray: #e0e0e0;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease-in-out;
+  --third-color: rgba(243,108,36,255);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: var(--text-color);
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+/* HEADER RESPONSIVE */
+header {
     width: 100%;
     position: fixed;
     top: 0;
@@ -73,6 +74,7 @@
     font-size: 1.1rem;
     transition: var(--transition);
     position: relative;
+    text-transform: capitalize;
   }
   
   .menu a.active {
@@ -98,16 +100,6 @@
   .menu a:hover::after {
     width: 100%;
   }
-  
-  .mobile-menu-btn {
-    display: none;
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    cursor: pointer;
-    background: none;
-    border: none;
-  }
-  
   .logOut {
     margin-left: 60px;
     display: flex;
@@ -128,20 +120,20 @@
     background: #005cacc2;
   }
 
-/* MAIN */
+/* MAIN CONTENT RESPONSIVE */
 main {
-  padding: 2rem;
-  margin-top: 20px;
+  padding: 1rem;
+  margin-top: 60px;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
 
-
 h1 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: left;
 }
 
 .dashboard {
@@ -149,72 +141,74 @@ h1 {
   background-color: var(--white);
   border-radius: 8px;
   box-shadow: var(--shadow);
-  padding: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* TABLE */
-
+/* TABLE RESPONSIVE */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    background-color: rgb(255, 255, 255);
-}
-
-thead {
-  color: var(--primary-color);
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+  min-width: 600px;
 }
 
 th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #dddddd;
-    font-size: 14px;
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+  font-size: 0.9rem;
 }
 
-tbody tr:hover {
-    background-color: #e1e8eb;
+th {
+  background-color: var(--light-color);
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
+.tool-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
 
+/* BOUTONS RESPONSIVE */
+.btn-accept, .btn-refuse {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  color: white;
+  white-space: nowrap;
+}
 
-/* Bouton ACCEPT */
 .btn-accept {
-    background-color: #40b808; 
-    border: none; 
-    border-radius: 5px;
-    color: rgb(255, 248, 248);
+  background-color: #40b808;
 }
 
-.btn-accept:hover {
-    background-color: #328b09;
-}
-
-/* Bouton  REFUSE  */
 .btn-refuse {
-    background-color: #f32626; 
-    border: none;
-    border-radius: 5px;
-    color: rgb(255, 248, 248);
+  background-color: #f32626;
 }
 
-.btn-refuse:hover {
-    background-color: #c02323;
-}
-
-
-
+/* FILTER STYLES */
 label, select {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 select {
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 200px;
 }
 
 
