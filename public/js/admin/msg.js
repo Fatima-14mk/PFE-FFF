@@ -1,18 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // pour la deconnexion
-    const logoutBtn = document.getElementById('logout-btn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (confirm('Êtes-vous sûr de vouloir vous déconnecter ?')) {
-                // Supprimer les données de session
-                localStorage.clear();
-                sessionStorage.clear();
-                // Rediriger vers la page de login
-                window.location.href = 'login.html';
-            }
-        });
-    }
+
 
     // Charger les détails du message si on est sur la page de détails
     if (window.location.pathname.includes('detail_msg.html')) {
@@ -30,8 +18,7 @@ function loadMessageDetails() {
         return;
     }
     
-    // Ici vous feriez normalement un appel API pour récupérer les détails du message
-    // Ceci est une simulation avec des données statiques
+   
     const messages = {
         '1': {
             fullName: 'Dina Kerrouche',

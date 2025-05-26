@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
 :root {
  --primary-color: #043ba9;
  --secondary-color: rgba(27, 119, 188, 1);
@@ -93,14 +94,7 @@
             width: 100%;
         }
 
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            color: var(--secondary-color);
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
+       
 
         main {
             flex: 1;
@@ -262,7 +256,7 @@
             color: var(--white);
             padding: 18px 0;
             font-family: 'Poppins', sans-serif;
-            height: 230px;
+            min-height: auto; 
         }
 
         .footer-container {
@@ -477,5 +471,5 @@
   .footer-section .logo img {
     margin: 0 auto;
   }
-}
+} 
    

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -17,15 +15,15 @@
         <div class="logo fade-in">
           <img src="../../../public/images/shared/logo.png" alt="logo" />
         </div>
-      
+
         <div class="menu fade-in">
           <a href="#home" class="fade-in">Home</a>
           <a href="#about" class="fade-in">About us</a>
           <a href="#contact" class="fade-in">Contact</a>
         </div>
         <div class="register fade-in">
-          <a href="../../../views/guest/donor/donor.html" class="fade-in">Donor</a>
-          <a href="../log_in/index2.html" class="fade-in">LogIn </a>
+          <a href="../../../views/guest/donor/donor.php" class="fade-in">Donor</a>
+          <a href="../log_in/index2.php" class="fade-in">Log in </a>
         </div>
       </nav>
 
@@ -73,16 +71,15 @@
       &#10094;
     </button>
     <ul class="image-list">
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-1" />
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-2" />
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-3" />
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-4" />
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-5" />
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-6" />
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-7" />
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-8" />
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-9" />
-      <img class="image-item" src="../../../public/images/guest/home/sl1.jpg" alt="img-10" />
+      <img class="image-item" src="../../../public/images/guest/home/PHOT HOME/jp1.png" alt="img-1" />
+      <img class="image-item" src="../../../public/images/guest/home/PHOT HOME/jp2.png" alt="img-2" />
+      <img class="image-item" src="../../../public/images/guest/home/PHOT HOME/jp3.png" alt="img-3" />
+      <img class="image-item" src="../../../public/images/guest/home/PHOT HOME/jp4.png" alt="img-4" />
+      <img class="image-item" src="../../../public/images/guest/home/PHOT HOME/jp5.png" alt="img-5" />
+      <img class="image-item" src="../../../public/images/guest/home/PHOT HOME/jp6.png" alt="img-6" />
+      <img class="image-item" src="../../../public/images/guest/home/PHOT HOME/jp7.png" alt="img-7" />
+      <img class="image-item" src="../../../public/images/guest/home/PHOT HOME/jp8.png" alt="img-8" />
+     
     </ul>
     <button id="next-slide" class="slide-button material-symbols-rounded">
       &#10095;
@@ -137,14 +134,16 @@
             <strong>needs assessment</strong>
             .
           </p>
-          <a href="../booknow/index1.html" class="btn">📅 Schedule an Appointment</a>
+          <a href="../booknow/index1.php" class="btn">📅 Schedule an Appointment</a>
 
         
         </div>
       </section>
       <!--Contact-->
        <section id="contact">
-        <form class="contact-form">
+      
+          <form class="contact-form" action="../../../controller/shared/send_message.php" method="POST">
+
           <h2>Contact us </h2>
           <div class="form-group">
             <div>
@@ -170,8 +169,7 @@
       </section>
       <!--Contact-->
     </main>
-
-    <!-- Footer -->
+ <!-- Footer -->
     <footer id="footer">
       <div class="footer-container">
         
@@ -207,7 +205,14 @@
       </div>
     </footer>
 
+
+
     <script src="../../../public/js/guest/home/script.js"></script>
     <!-- JavaScript ajouté -->
+     <script>
+document.querySelector("form.contact-form").addEventListener("submit", function(e) {
+    e.submitter.disabled = true;
+});
+</script>
   </body>
 </html>

@@ -1,3 +1,12 @@
+document.getElementById('phone').addEventListener('input', function(e) {
+  this.value = this.value.replace(/[^0-9]/g, '');
+});
+
+document.getElementById('full_name').addEventListener('input', function(e) {
+  this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s]/g, '');
+});  
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");

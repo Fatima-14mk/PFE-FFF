@@ -1,120 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
 :root {
-  
-  --primary-blue: #024ee2;
-  --dark-blue: #005bac;
-  --orange: #ff6600;
-  --light-blue: rgba(27, 119, 188, 1);
-  --white: #fff;
-  --off-white: #fcfefffa;
-  --dark-bg: #121212;
-  --text-color: #333;
-  --nav-height: 109.59px;
-}
+ --primary-color: #043ba9;
+ --secondary-color: rgba(27, 119, 188, 1);
+ --accent-color: #ff6600;
+            --third-color: rgba(243, 108, 36, 1);
+          --dark-color: #121212;
+            --light-color: #f8f9fa;
+            --white: #ffffff;
+            --text-color: #333333;
+            --gray: #555555;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease-in-out;
+        }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  
 }
 
 body {
   background-color: var(--off-white);
+  font-family: 'Poppins', sans-serif;
+
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--nav-height);
-  background-color: var(--off-white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  z-index: 1000;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  
-}
+ header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+        }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-grow: 1;
-}
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
-.logo img {
-  height: 80px;
-  width: 100px;
-  padding-top: 5px;
-  padding-left: 5px;
-  border-radius: 10px;
-}
+        .logo img {
+            height: 70px;
+            width: auto;
+            transition: var(--transition);
+        }
 
-.menu {
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-end;
-  width: 100%;
-}
+        .menu {
+            display: flex;
+            gap: 2rem;
+            justify-content: flex-end;
+            width: 100%;
+        }
 
-.menu a {
-  text-decoration: none;
-  color: var(--light-blue);
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: all 0.3s ease-in-out;
-  position: relative;
-}
+        .menu a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            position: relative;
+        }
 
-.menu a:hover {
-  color: var(--orange);
-}
+        .menu a:hover {
+            color: var(--accent-color);
+        }
 
-.menu a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: var(--orange);
-  transition: all 0.3s ease-in-out;
-}
+        .menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
 
-.menu a:hover::after {
-  width: 100%;
-}
+        .menu a:hover::after {
+            width: 100%;
+        }
+
+        
+
+        
+
 
 .register {
-  margin-left: 25px;
+  margin-left: 25px; /* Espace entre le menu et le bouton */
   display: flex;
   gap: 20px;
-  height: 45px;
+  height:45px;
 }
-
 .register a {
   text-decoration: none;
   color: blanchedalmond;
   padding: 10px 20px;
   font-size: 15px;
   border-radius: 8px;
-  background: var(--primary-blue);
+  background: #024ee2;
   width: 85px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
 }
 
 .register a:hover {
-  border: 1px solid var(--dark-blue);
-  background: var(--dark-blue);
+  border: 1px solid #005bac;
+  background: #005bac; /* Bleu */
 }
-
 
 /* ================= Form ================= */
 .form-container {
@@ -178,12 +175,13 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #218838;
 }
+
 .menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 24px;
-  color: var(--primary-blue);
+  color: var(--primary-color);
   cursor: pointer;
   padding: 5px;
 }

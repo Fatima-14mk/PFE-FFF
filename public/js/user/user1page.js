@@ -33,3 +33,25 @@ document.addEventListener('DOMContentLoaded', function() {
         register.classList.remove('active');
     });
 });
+// 1. Gestion du menu mobile - C'EST LA PARTIE RESPONSIVE PRINCIPALE
+if (menuToggle && menu) {
+    menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Fermer le dropdown settings si ouvert
+        if (dropdownMenu) dropdownMenu.classList.remove('show');
+        
+        // Basculer le menu principal - CORE RESPONSIVE FUNCTIONALITY
+        menu.classList.toggle('active');
+        nav.classList.toggle('menu-open');
+    });
+
+    // Fermer le menu au clic ailleurs - IMPORTANT POUR MOBILE
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('nav')) {
+            menu.classList.remove('active');
+            nav.classList.remove('menu-open');
+        }
+    });
+}

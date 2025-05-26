@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
+
 :root {
   --primary-color: #043ba9;
   --secondary-color: rgba(27,119,188,255);
@@ -99,14 +101,6 @@ nav {
   width: 100%;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: var(--primary-blue);
-  cursor: pointer;
-  padding: 5px;}
 
   /*MAIN*/
   main {
@@ -184,7 +178,8 @@ nav {
     cursor: pointer;
     margin: 10px;
     border-radius: 10px;
-    transition: background-color 0.3s;
+    background-color:    rgb(50, 122, 194);
+    transition:  0.3s;
   }
   
   .Command-1,.Command-2,.Command-3,.Command-4,.Command-5,.Command-6,.Command-7,.Command-8{
@@ -375,7 +370,7 @@ nav {
 .description{
   color: rgba(0, 0, 0, 0.589);
 }
-/* Footer */
+  /* Footer */
 footer {
   background: var(--dark-color);
   color: white;
@@ -442,9 +437,19 @@ footer {
   font-size: 14px;
 }
 
-
-
-
+.menu-toggle {
+          display: none;
+          color: var(--primary-color);
+          cursor: pointer;
+          background: none !important;
+          border: none !important;
+          font-size: 24px !important;
+          padding: 5px !important; /* Réduit l'espace interne */
+         width: auto !important;  /* Annule toute largeur forcée */
+         height: auto !important; /* Annule toute hauteur forcée */
+         margin-left: auto !important; /* Pousse à droite */
+         order: 1 !important;     /* S'assure qu'il est après le logo */
+        }
 /* =============== MOBILE RESPONSIVE STYLES ONLY =============== */
 @media (max-width: 991px) {
   /* Navbar Mobile */
@@ -553,6 +558,14 @@ footer {
 
   .modal-image-container img {
       max-height: 200px;
+  }
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-section .logo img {
+    margin: 0 auto;
   }
 }
 

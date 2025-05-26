@@ -188,6 +188,7 @@ th {
   color: var(--primary-color);
 }
 
+
 tbody tr:hover {
     background-color: #e1e8eb;
 }
@@ -318,19 +319,32 @@ select {
 #close-tool-form {
     color: #ddd;
     background-color: #f32626;
+    border: none;
 }
 
 #close-tool-form:hover {
     background-color: #c02323;
+    border: none;
 }
 
 
-#submitTool {
+#submit {
     color: #ddd;
     background-color: #40b808;
+    border: none;
 }
 
-#submitTool:hover {
+#submit:hover {
     background-color: #328b09;
+    border: none;
 }
+textarea {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 13px;
+  width: 80%;
+  resize: none;
 
+}

@@ -1,92 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
 :root {
-  --primary-blue: #024ee2;
-  --dark-blue: #005bac;
-  --orange: #ff6600;
-  --light-blue: rgba(27, 119, 188, 1);
-  --white: #fff;
-  --off-white: #fcfefffa;
-  --dark-bg: #121212;
-  --text-color: #333;
-  --nav-height: 109.59px;
-}
+ --primary-color: #043ba9;
+ --secondary-color: rgba(27, 119, 188, 1);
+ --accent-color: #ff6600;
+ --third-color: rgba(243, 108, 36, 1);
+ --dark-color: #121212;
+ --light-color: #f8f9fa;
+ --white: #ffffff;
+ --text-color: #333333;
+ --gray: #555555;
+ --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ --transition: all 0.3s ease-in-out;
+  }
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
      background-color: var(--off-white);
+     font-family: 'Poppins', sans-serif;
+
 }
 
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100px; 
-    background-color: rgb(255, 255, 255); /* Dark background for visibility */
-    color: #dbd5d5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 1000; /* Ensures navbar stays on top */
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-grow: 1; /* Permet d'occuper l'espace à gauche */
-  }
-  
-  .logo img {
-    height: 80px; /* Ajuste selon la taille désirée */
-    width: 100px;
-    padding-top: 5px;
-    padding-left: 5x; /* Ajoute un peu d'espace depuis le bord */
-    border-radius: 10px;
-  }
-  .menu {
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-end;
-    width: 100%;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color:rgba(27, 119, 188, 1);
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-  }
-  .menu a:hover {
-    color: #ff6600;
-  }
-  .menu a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color:  #ff6600;
-    transition:all 0.3s ease-in-out;
-  }
-  
-  .menu a:hover::after {
-    width: 100%;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 109.59px; 
+  background-color: #fcfefffa; 
+  color: #dbd5d5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000; 
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.4);
+ } 
+
+
+body {
+  /* padding-top: 110px; Adjust based on navbar height */
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1; /* Permet d'occuper l'espace à gauche */
+}
+
+.logo img {
+  height: 80px; /* Ajuste selon la taille désirée */
+  width: 100px;
+  padding-top: 5px;
+  padding-left: 5x; /* Ajoute un peu d'espace depuis le bord */
+  border-radius: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.menu a {
+  text-decoration: none;
+  color:rgba(27, 119, 188, 1);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.menu a:hover {
+  color: #ff6600;
+}
+.menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color:  #ff6600;
+  transition:all 0.3s ease-in-out;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
   .register {
     margin-left: 25px; /* Espace entre le menu et le bouton */
     display: flex;
@@ -116,8 +128,9 @@ nav {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 90px;
+    margin-top: 200px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 h2 {
@@ -184,89 +197,101 @@ button:hover {
 .signup-text a:hover {
     text-decoration: underline;
 }
+
 .menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: var(--primary-blue);
-  cursor: pointer;
-  padding: 5px;
-}
+          display: none;
+          color: var(--primary-color);
+          cursor: pointer;
+          background: none !important;
+          border: none !important;
+          font-size: 24px !important;
+          padding: 5px !important; /* Réduit l'espace interne */
+         width: auto !important;  /* Annule toute largeur forcée */
+         height: auto !important; /* Annule toute hauteur forcée */
+         margin-left: auto !important; /* Pousse à droite */
+         order: 1 !important;     /* S'assure qu'il est après le logo */
+
+        }
+
 @media (max-width: 767px) {
-  nav {
-    /* Activer l'emballage flex et l'espacement */
+  body {
+  margin-top: 50px;
+}
+nav {  
     flex-wrap: wrap;
-    justify-content: space-between; /* Clé pour séparer logo et toggle */
     padding: 10px 15px;
-}
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.logo {
-  order: 0;  /* Logo en premier dans l'ordre visuel */
-  
-  
-}
-.logo img {
-  height: 60px;
-  width: 80px;
-}
+  .logo {
+    order:0;
+    
+    
+  }
 
-.menu-toggle {
-  display: block;
-  order: 1;
-  margin-left: auto;
-}
+  .logo img {
+    height: 60px;
+    width: 80px;
+  }
+   .menu-toggle {
+    display: block;
+    order: 1;
+    margin-left: auto;
+     z-index: 1001;
+  }
 
   .menu {
     display: none;
-    order: 3;
+    order: 2;
     width: 100%;
     flex-direction: column;
     background: var(--off-white);
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 20px;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+   
   }
 
   .menu.active {
-    display: flex;        /* affiche le menu quand actif */
-  }
-
-  .menu a {
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-  }
-  .register {
-    display: none;
-    order: 4;
-    width: 100%;
-    margin: 0;
-    padding: 15px 20px;
-    background: var(--off-white);
-    border-radius: 0 0 8px 8px;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-    height: auto;
-  }
-
-  .register.active {
     display: flex;
   }
 
-  .register a {
-    width: 48%;
-    height: auto;
-    padding: 10px;
-    font-size: 14px;
-    text-align: center;
+  .menu a {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    
   }
-
+.register {
+    display: none;                 /* ↳ Cache complètement le bloc “register” tant qu’il n’a pas la classe .active */
+    order: 3;                      /* ↳ Le place en 4ᵉ position dans le flux Flexbox du <nav> */
+    width: 100%;                   /* ↳ Occupe toute la largeur disponible */
+    margin: 0;                     /* ↳ Aucun espace extérieur */
+    padding: 15px 20px;            /* ↳ 15 px haut/bas – 20 px gauche/droite de rembourrage interne */
+    background: var(--off-white);  /* ↳ Fond clair défini par la variable CSS */
+    border-radius: 0 0 8px 8px;    /* ↳ Coins inférieurs arrondis (8 px) */
+    flex-direction: row;           /* ↳ Aligne les enfants horizontalement (ligne) */
+    justify-content: space-between;/* ↳ Distribue l’espace libre : 1ᵉʳ enfant collé à gauche, dernier à droite */
+    gap: 10px;                     /* ↳ Laisse 10 px entre les enfants */
+    height: auto;                  /* ↳ Hauteur ajustée au contenu */
+  }
   
+  .register.active {
+    display: flex;                 /* ↳ Quand la classe .active est ajoutée, le bloc devient visible et “flex” */
+  }
+  
+  .register a {
+    width: 48%;                    /* ↳ Chaque bouton occupe ~la moitié de la largeur (48 %) */
+    height: auto;                  /* ↳ Hauteur selon le contenu + padding */
+    padding: 10px;                 /* ↳ Zone cliquable confortable */
+    font-size: 14px;               /* ↳ Taille du texte */
+    text-align: center;            /* ↳ Centre le texte dans chaque bouton */
+  }
   .form-container {
     width: 90%;
-    margin-top: 20px;
+    margin-top: 50px;
   }}
   
   
