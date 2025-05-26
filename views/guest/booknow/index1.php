@@ -84,28 +84,21 @@ document.querySelector("form").addEventListener("submit", function(e) {
     if (hasDateError) {
       dateInput.classList.add("error-input");
       errorMsg.style.display = "block";
+
+      // Supprimer le paramètre de l'URL immédiatement
+      const url = new URL(window.location.href);
+      url.searchParams.delete("error");
+      window.history.replaceState({}, "", url);
     }
 
-    // Dès que l'utilisateur change la date, on enlève le rouge
     dateInput.addEventListener("change", () => {
       dateInput.classList.remove("error-input");
       errorMsg.style.display = "none";
-      // En option : enlever ?error=date de l'URL
-      const url = new URL(window.location.href);
-      url.searchParams.delete('error');
-      window.history.replaceState({}, '', url);
     });
   });
 </script>
-<script>
-  // Supprimer ?success=1 de l'URL une fois le message affiché
-  const url = new URL(window.location.href);
-  if (url.searchParams.get("success") === "1") {
-    // Supprimer le paramètre de l'URL sans recharger
-    url.searchParams.delete("success");
-    window.history.replaceState({}, document.title, url);
-  }
-</script>
+
+
 <script src="../../../public/js/guest/book/book.js"></script>
 
 

@@ -51,8 +51,8 @@ $countResult = $stmtCount->get_result();
 $count = $countResult->fetch_assoc()['total'];
 
 // Si 10 rendez-vous ou plus : afficher erreur
-if ($count >= 10) {
-    header("Location: ../../views/guest/booknow/index1.html?error=date");
+if ($count >= 6) {
+    header("Location: ../../views/guest/booknow/index1.php?error=date");
 exit();
 
 }

@@ -372,10 +372,11 @@ body {
  #contact{
   padding-top: 120px;
   background: #f4f4f4;
-  height: 700px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 80px;
   
 }
 .contact-form {
